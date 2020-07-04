@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 /**
  * @author wjx
  * @date 2020/7/1 11:33
- * @deprecated 密码验证规则（方式一：实现AuthenticationProvider）
+ * @description 密码验证规则（方式一：实现AuthenticationProvider）
  */
 @Component
 public class MyAuthenticationProvider implements AuthenticationProvider {

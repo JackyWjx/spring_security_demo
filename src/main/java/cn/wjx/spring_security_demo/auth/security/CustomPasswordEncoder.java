@@ -8,7 +8,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * @author wjx
  * @date 2020/7/3 11:14
- * @deprecated 自定义密码验证规则（方式二）
+ * @description 自定义密码验证规则（方式二）
  */
 public class CustomPasswordEncoder implements PasswordEncoder {
 
