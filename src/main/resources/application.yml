@@ -1,0 +1,58 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://116.62.162.85:3307/security_demo?useSSl=false&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat,wall,log4j
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 20
+    connectionProperties:
+      druid:
+        stat:
+          mergeSql: true
+          slowSqlMillis: 5000
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+  redis:
+    host: 116.62.162.85
+    port: 6379
+    password: redis
+
+
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.deceen.demo.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+#  context-path: /work
+  port: 8088
+  tomcat:
+    uri-encoding: utf-8
+
+
+token:
+  expirationSeconds: 300
+  validTime: 7
+
+logging:
+  level:
+    cn:
+      wjx:
+        spring_security_demo: debug
